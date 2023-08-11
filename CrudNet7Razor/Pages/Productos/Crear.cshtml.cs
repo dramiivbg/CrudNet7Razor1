@@ -2,6 +2,7 @@ using CrudNet7Razor.Datos;
 using CrudNet7Razor.Modelos;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.EntityFrameworkCore;
 
 namespace CrudNet7Razor.Pages.Productos
 {
@@ -24,6 +25,7 @@ namespace CrudNet7Razor.Pages.Productos
 
         public void OnGet()
         {
+     
         }
 
         public async Task<IActionResult> OnPost()

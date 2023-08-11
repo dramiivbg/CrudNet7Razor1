@@ -21,5 +21,6 @@ namespace CrudNet7Razor.Modelos
         public DateTime FechaCreacion { get; set; }
 
 
+
     }
 }

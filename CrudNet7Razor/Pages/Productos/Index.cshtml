@@ -14,6 +14,10 @@
     </div>
     
 }
+
+
+
+
 <div class="card">
     <div class="card-header bg-dark">
         <div class="row">
@@ -41,7 +45,7 @@
                     <th>@Html.DisplayNameFor(m => m.Productos.First().FechaCreacion)</th>
                     <th>Acciones</th>
                 </tr>
-                @foreach (var item in Model.Productos)
+                @foreach (var item in  Model.Productos)
                 {
                   <tr>
                         <td>@Html.DisplayFor(m => item.Id)</td>
