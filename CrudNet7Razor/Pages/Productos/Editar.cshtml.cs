@@ -33,6 +33,7 @@ namespace CrudNet7Razor.Pages.Productos
             {
                 var CursodesdeDB = await _context.Producto.FindAsync(Producto.Id);
 
+                CursodesdeDB.FechaActualizacion = DateTime.Now;
                 CursodesdeDB.NombreProducto = Producto.NombreProducto;
                 CursodesdeDB.Descripcion = Producto.Descripcion;
                 CursodesdeDB.EnStock = Producto.EnStock;

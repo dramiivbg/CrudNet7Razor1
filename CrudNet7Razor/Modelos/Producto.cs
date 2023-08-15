@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Diagnostics.CodeAnalysis;
 
 namespace CrudNet7Razor.Modelos
 {
@@ -19,6 +20,9 @@ namespace CrudNet7Razor.Modelos
 
         [Display(Name = "Fecha de creacion")]
         public DateTime FechaCreacion { get; set; }
+
+        [AllowNull]
+        public DateTime FechaActualizacion { get; set; }
 
 
 

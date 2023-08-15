@@ -49,14 +49,19 @@
                 <h2 class="display-5">Another headline</h2>
                 <p class="lead">And an even wittier subheading.</p>
             </div>
-            <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
+            <div>
+                <canvas id="myDoughnutChart"></canvas>
+            </div>
         </div>
         <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
             <div class="my-3 py-3">
                 <h2 class="display-5">Another headline</h2>
                 <p class="lead">And an even wittier subheading.</p>
             </div>
-            <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
+            <div>
+                <canvas id="myLineChart"></canvas>
+            </div>
+
         </div>
     </div>
 
@@ -83,9 +88,7 @@
 
      <script>
 
-        const ctx1 = document.getElementById('myPolarAreaChart');
-
-        new Chart(ctx1, {
+        new Chart(document.getElementById('myPolarAreaChart'), {
             type: 'polarArea',
             data: {
                 labels: [
@@ -123,11 +126,8 @@
      </script>
 
      <script>
-        const ctx = document.getElementById('myBarChart');
 
-        
-
-        new Chart(ctx, {
+        new Chart(document.getElementById('myBarChart'), {
             type: 'bar',
             data: {
                 labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
@@ -148,5 +148,71 @@
 
      </script>
 
+    <script>
+
+        new Chart(document.getElementById('myLineChart'), {
+            type: 'line',
+            data: {
+                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                datasets: [{
+                    label: 'Dataset 1',
+                    data: [12, 19, 3, 5, 2, 3],
+                    borderColor: 'rgb(75, 192, 192)',
+                    backgroundColor: '#FFFFFF'
+
+
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Chart.js Line Chart'
+                    }
+                }
+
+            }
+
+        });
+
+    </script>
+
+
+        <script>
+
+        new Chart(document.getElementById('myDoughnutChart'), {
+            type: 'doughnut',
+            data: {
+                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                datasets: [{
+                    label: 'Dataset 1',
+                    data: [12, 19, 3, 5, 2, 3],
+                    backgroundColor: ['#FF0000', '#0000FF', '#FFFF00', '#808080', '#7d2181', '#FFA500'],
+
+
+
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Chart.js Doughnut Chart'
+                    }
+                }
+
+            }
+
+        });
+
+    </script>
 
     }
